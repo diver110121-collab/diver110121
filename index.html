@@ -1,11 +1,319 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Mi Página de Prueba</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Bitácora - Apasionados por Volvo Penta</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Un azul muy claro como fondo */
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 20, 40, 0.7), rgba(0, 20, 40, 0.7)), url('https://images.unsplash.com/photo-1599672199349-5586b20f8c36?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
 </head>
-<body>
-    <h1>¡Hola, Mundo!</h1>
-    <p>Esta es mi primera página web alojada en GitHub Pages.</p>
-    <p>Esta es una página legítima creada con fines educativos.</p>
+<body class="text-gray-800">
+
+    <!-- Header / Navbar -->
+    <header class="bg-white/80 backdrop-blur-md shadow-sm fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text-blue-900">
+                    <a href="#">MI BITÁCORA <span class="text-blue-600">VOLVO PENTA</span></a>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#topics" class="text-gray-600 hover:text-blue-600">Temas</a>
+                    <a href="#gallery" class="text-gray-600 hover:text-blue-600">Galería</a>
+                    <a href="#community" class="text-gray-600 hover:text-blue-600">Comunidad</a>
+                    <a href="#about" class="text-gray-600 hover:text-blue-600">Sobre Mí</a>
+                </nav>
+                <a href="#community" class="hidden md:block bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition duration-300">Comparte tu Historia</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="hero-bg text-white pt-32 pb-20">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Diario de un Motor Marino</h1>
+                <p class="text-lg md:text-xl text-blue-200 max-w-3xl mx-auto">Un espacio para propietarios y aficionados de motores Volvo Penta. Aquí comparto mis reparaciones, trucos y experiencias para mantener nuestras máquinas navegando.</p>
+            </div>
+        </section>
+
+        <!-- Topics Section -->
+        <section id="topics" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-blue-900">Temas Populares</h2>
+                    <p class="text-gray-600 mt-2">Explora las reparaciones y mantenimientos más comunes que he documentado.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Topic Card 1 -->
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md transition duration-300 card-hover">
+                        <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                            <i data-lucide="clipboard-list" class="text-blue-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-900 mb-2">Mantenimiento Básico</h3>
+                        <p class="text-gray-600">Cambios de aceite, filtros y revisión de ánodos. Lo esencial para empezar la temporada con buen pie.</p>
+                    </div>
+                    <!-- Topic Card 2 -->
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md transition duration-300 card-hover">
+                        <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                            <i data-lucide="thermometer-snowflake" class="text-blue-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-900 mb-2">Sistema de Refrigeración</h3>
+                        <p class="text-gray-600">Limpieza de intercambiadores, cambio de rodetes y solución a problemas de sobrecalentamiento.</p>
+                    </div>
+                    <!-- Topic Card 3 -->
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md transition duration-300 card-hover">
+                        <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                            <i data-lucide="cpu" class="text-blue-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-900 mb-2">Electrónica y Sensores</h3>
+                        <p class="text-gray-600">Diagnóstico de fallos comunes con VODIA, revisión de sensores y problemas eléctricos.</p>
+                    </div>
+                    <!-- Topic Card 4 -->
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md transition duration-300 card-hover">
+                        <div class="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                            <i data-lucide="ship-wheel" class="text-blue-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-900 mb-2">Proyectos Mayores</h3>
+                        <p class="text-gray-600">Documentación de reparaciones complejas: inyectores, turbos o trabajos en la transmisión.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-blue-900">Galería de la Comunidad</h2>
+                    <p class="text-gray-600 mt-2">Imágenes y vídeos de nuestras reparaciones y aventuras en el mar.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="grid gap-4">
+                        <div><img class="h-auto max-w-full rounded-lg" src="https://images.unsplash.com/photo-1621874266601-552e13c357b2?q=80&w=1974&auto=format&fit=crop" alt="Motor marino siendo reparado"></div>
+                        <div><img class="h-auto max-w-full rounded-lg" src="https://images.unsplash.com/photo-1616091469954-a03525287515?q=80&w=1964&auto=format&fit=crop" alt="Detalle de un motor Volvo Penta"></div>
+                    </div>
+                     <div class="grid gap-4">
+                        <div><img class="h-auto max-w-full rounded-lg" src="https://images.unsplash.com/photo-1565543355497-e4b5a2a2f32a?q=80&w=1974&auto=format&fit=crop" alt="Técnico trabajando en un motor"></div>
+                        <div><img class="h-auto max-w-full rounded-lg" src="https://images.unsplash.com/photo-1621874266155-b5387990170a?q=80&w=1974&auto=format&fit=crop" alt="Barco navegando en el mar"></div>
+                    </div>
+                     <div class="grid gap-4">
+                        <div><img class="h-auto max-w-full rounded-lg" src="https://images.unsplash.com/photo-1541347025534-b2a8139537d8?q=80&w=1964&auto=format&fit=crop" alt="Hélice de un barco"></div>
+                        <div><img class="h-auto max-w-full rounded-lg" src="https://images.unsplash.com/photo-1615555811029-79c2a8b98e73?q=80&w=1974&auto=format&fit=crop" alt="Motor potente en un barco"></div>
+                    </div>
+                    <div class="grid gap-4">
+                        <div><img class="h-auto max-w-full rounded-lg" src="https://images.unsplash.com/photo-1544922629-9e8c1b333a35?q=80&w=1974&auto=format&fit=crop" alt="Vista del motor desde arriba"></div>
+                        <div><img class="h-auto max-w-full rounded-lg" src="https://images.unsplash.com/photo-1629814120329-6a310850c184?q=80&w=1964&auto=format&fit=crop" alt="Taller de reparación náutica"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community/Comments Section -->
+        <section id="community" class="py-20 bg-white">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-blue-900">Foro de la Comunidad</h2>
+                    <p class="text-gray-600 mt-2">Comparte tus dudas, consejos y experiencias con otros propietarios.</p>
+                </div>
+
+                <!-- Comment Form -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md mb-8">
+                    <h3 class="text-xl font-bold text-blue-900 mb-4">Añade tu Aporte</h3>
+                    <form id="comment-form" class="space-y-4">
+                        <input id="comment-name" type="text" placeholder="Tu nombre o apodo" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none" required>
+                        <textarea id="comment-text" placeholder="Escribe aquí tu pregunta o comparte tu experiencia..." rows="4" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none" required></textarea>
+                        <div class="text-right">
+                            <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition duration-300 font-semibold">Publicar Aporte</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Comments Display -->
+                <div id="comments-container" class="space-y-6">
+                    <!-- Los comentarios se cargarán aquí -->
+                    <p id="loading-comments" class="text-center text-gray-500">Cargando aportes de la comunidad...</p>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer id="about" class="bg-blue-900 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Mi Bitácora Volvo Penta</h3>
+                    <p class="text-blue-200">Un proyecto personal para documentar y compartir la pasión por la mecánica marina y los motores Volvo Penta.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Recursos Útiles</h3>
+                    <ul class="space-y-2 text-blue-200">
+                        <li><a href="#" class="hover:text-white">Manuales Oficiales Volvo Penta</a></li>
+                        <li><a href="#" class="hover:text-white">Foros de Navegantes</a></li>
+                        <li><a href="#" class="hover:text-white">Tiendas de Repuestos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Sígueme</h3>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <a href="#" class="text-blue-200 hover:text-white"><i data-lucide="youtube"></i></a>
+                        <a href="#" class="text-blue-200 hover:text-white"><i data-lucide="instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-blue-800 pt-6 text-center text-blue-300">
+                <p>&copy; 2025 Mi Bitácora Volvo Penta. Creado por un aficionado para aficionados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase SDKs -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+        import { getAuth, signInAnonymously, onAuthStateChanged, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+        import { getFirestore, collection, addDoc, query, orderBy, onSnapshot, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+        // --- Configuración de Firebase ---
+        // Estas variables se reemplazarán automáticamente en el entorno de ejecución. NO las modifiques.
+        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : { apiKey: "AIza...", authDomain: "...", projectId: "..." };
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'volvo-penta-repairs';
+        const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+
+        // --- Inicialización de Firebase ---
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+
+        // Se declara la variable aquí para que sea accesible en todo el script
+        let commentsCollection;
+
+        // --- Autenticación y Carga de Comentarios ---
+        onAuthStateChanged(auth, async (user) => {
+            if (user) {
+                // El usuario ya está autenticado.
+                // Se inicializa la colección aquí para asegurar que la autenticación está lista.
+                commentsCollection = collection(db, `artifacts/${appId}/public/data/comments`);
+                loadComments();
+            } else {
+                // El usuario no está autenticado, no se hace nada hasta que se inicie sesión.
+                console.log("Esperando autenticación...");
+            }
+        });
+
+        // --- Función para iniciar la autenticación ---
+        async function initializeAuth() {
+            if (initialAuthToken) {
+               try {
+                  await signInWithCustomToken(auth, initialAuthToken);
+               } catch (e) {
+                  console.error("Error signing in with custom token, falling back to anonymous:", e);
+                  await signInAnonymously(auth).catch(e2 => console.error("Error signing in anonymously:", e2));
+               }
+            } else {
+                // Si no hay token, intenta iniciar sesión anónimamente.
+                await signInAnonymously(auth).catch(e => console.error("Error signing in anonymously:", e));
+            }
+        }
+
+        // Iniciar el proceso de autenticación
+        initializeAuth();
+        
+        // --- Cargar y mostrar comentarios en tiempo real ---
+        function loadComments() {
+            const commentsContainer = document.getElementById('comments-container');
+            const loadingMessage = document.getElementById('loading-comments');
+            
+            const q = query(commentsCollection, orderBy('timestamp', 'desc'));
+
+            onSnapshot(q, (querySnapshot) => {
+                commentsContainer.innerHTML = ''; // Limpiar comentarios existentes
+                if (querySnapshot.empty) {
+                    commentsContainer.innerHTML = '<p class="text-center text-gray-500">Todavía no hay aportes. ¡Sé el primero en compartir tu experiencia!</p>';
+                } else {
+                    querySnapshot.forEach((doc) => {
+                        const comment = doc.data();
+                        const commentElement = document.createElement('div');
+                        commentElement.className = 'bg-gray-100 p-6 rounded-lg';
+                        
+                        const date = comment.timestamp ? comment.timestamp.toDate().toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' }) : 'Ahora';
+
+                        commentElement.innerHTML = `
+                            <div class="flex items-center mb-2">
+                                <span class="font-bold text-blue-800">${comment.name || 'Invitado'}</span>
+                                <span class="text-gray-500 text-sm ml-auto">${date}</span>
+                            </div>
+                            <p class="text-gray-700">${comment.text}</p>
+                        `;
+                        commentsContainer.appendChild(commentElement);
+                    });
+                }
+            }, (error) => {
+                console.error("Error al cargar comentarios: ", error);
+                loadingMessage.innerText = 'Error al cargar los comentarios.';
+            });
+        }
+        
+        // --- Enviar un nuevo comentario ---
+        const commentForm = document.getElementById('comment-form');
+        commentForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const nameInput = document.getElementById('comment-name');
+            const textInput = document.getElementById('comment-text');
+
+            if (!commentsCollection) {
+                alert('La sección de comentarios no está lista. Por favor, inténtalo de nuevo en un momento.');
+                return;
+            }
+
+            if (nameInput.value.trim() && textInput.value.trim()) {
+                try {
+                    await addDoc(commentsCollection, {
+                        name: nameInput.value,
+                        text: textInput.value,
+                        timestamp: serverTimestamp()
+                    });
+                    nameInput.value = '';
+                    textInput.value = '';
+                } catch (error) {
+                    console.error("Error al añadir el comentario: ", error);
+                    alert('Hubo un error al publicar tu comentario. Por favor, inténtalo de nuevo.');
+                }
+            }
+        });
+
+    </script>
+    
+    <!-- Script para inicializar los iconos -->
+    <script>
+        lucide.createIcons();
+    </script>
+
 </body>
 </html>
+
